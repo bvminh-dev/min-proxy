@@ -1,0 +1,8 @@
+{
+  "port": 3800,
+  "apiKey": "",
+  "timeoutMs": 60000,
+  "routes": {
+    "pr-portal": ""
+  }
+}
