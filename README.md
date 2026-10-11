@@ -14,7 +14,7 @@ npm start
 node server.js
 ```
 
-Mặc định chạy ở `http://localhost:3000` (theo `port` trong `config.json`).
+Mặc định chạy ở `http://localhost:3800` (theo `port` trong `config.json`).
 
 ## Cấu hình
 
@@ -22,7 +22,7 @@ File `config.json`:
 
 ```json
 {
-  "port": 3000,
+  "port": 3800,
   "apiKey": "",
   "timeoutMs": 60000,
   "routes": {
@@ -50,7 +50,7 @@ http://localhost:<port>/<code>[/path/phụ][?query]
 Proxy ghép path phụ và query vào URL đích. Ví dụ với route `lms`:
 
 ```
-POST http://localhost:3000/lms/api/v1/auth/otp/request
+POST http://localhost:3800/lms/api/v1/auth/otp/request
 → POST https://lms-api-dev.atstechnology.vn/api/v1/auth/otp/request
 ```
 
@@ -61,7 +61,7 @@ Query trong URL của route và query của request được gộp lại.
 cmd (Windows):
 
 ```bat
-curl --url "http://localhost:3000/lms/api/v1/auth/otp/request" ^
+curl --url "http://localhost:3800/lms/api/v1/auth/otp/request" ^
   -H "content-type: application/json" ^
   -H "origin: https://lms-dev.atstechnology.vn" ^
   -H "referer: https://lms-dev.atstechnology.vn/" ^
@@ -71,7 +71,7 @@ curl --url "http://localhost:3000/lms/api/v1/auth/otp/request" ^
 PowerShell:
 
 ```powershell
-curl.exe "http://localhost:3000/lms/api/v1/auth/otp/request" `
+curl.exe "http://localhost:3800/lms/api/v1/auth/otp/request" `
   -H "content-type: application/json" `
   --data-raw '{\"email\":\"you@example.com\"}'
 ```
@@ -79,7 +79,7 @@ curl.exe "http://localhost:3000/lms/api/v1/auth/otp/request" `
 Bash:
 
 ```bash
-curl "http://localhost:3000/lms/api/v1/auth/otp/request" \
+curl "http://localhost:3800/lms/api/v1/auth/otp/request" \
   -H "content-type: application/json" \
   -d '{"email":"you@example.com"}'
 ```
